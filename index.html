@@ -11,9 +11,28 @@
         <h1>DCC121 ATV6</h1>
     </header>
     <main>
+        <p id  = "saida"> A pessoa Nome tem X anos </p>
     </main>
+
     <footer>
         &copy; Igor Knop de Oliveira - 2023 
     </footer>
+    <script>
+    console.log('Hello, world!');
+    let pessoa;
+    pessoa = {
+        id: 1,
+        nome: 'Fulano',
+        idade: 15,
+        envelhecer: function(){
+            this.idade++;
+        }
+    };
+    pessoa.envelhecer();
+    console.log(pessoa);
+    const p = document.getElementById('saida');
+    console.log(p);
+    p.innerText = `A pessoa ${pessoa.nome} tem ${pessoa.idade} anos`;
+    </script>
 </body>
 </html>
